@@ -1,0 +1,14 @@
+📄 users.txt
+123456
+password
+qwerty
+msfadmin
+
+
+
+📄 pass.txt
+123456
+password
+qwerty
+msfadmin
+

